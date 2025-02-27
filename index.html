@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free symptom checker - Get instant insights about your health symptoms and possible conditions">
+    <title>Health Symptom Checker AI | Powered by Kridak </title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>This website uses cookies to ensure you get the best experience. By continuing to use this site, you accept our use of cookies.</p>
+        <button onclick="acceptCookies()">Accept</button>
+        <a href="privacy.html">Learn More</a>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <h1>Health Symptom Checker</h1>
+            <div class="powered-by">
+                <p><strong>Powered by Kridak</strong></p>
+            </div>
+            <div class="instruction-text">
+                <p> <span>(select atleast 2 symptoms)</span></p>
+            </div>
+            <div class="disclaimer">
+                <p>Note: This tool provides general information only and should not replace professional medical advice. Always consult a healthcare provider for diagnosis and treatment.</p>
+            </div>
+
+            <div class="symptom-input">
+                <h2>What symptoms are you experiencing?</h2>
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="symptomSearch" 
+                        placeholder="Type your symptoms here (e.g., headache, fever...)" 
+                        aria-label="Search symptoms"
+                    >
+                    <div id="symptomsList" class="symptoms-list" role="listbox"></div>
+                </div>
+                
+                <div id="selectedSymptoms" class="selected-symptoms">
+                    <h3>Selected Symptoms</h3>
+                    <div id="selectedSymptomsList" role="list"></div>
+                </div>
+                
+                <button onclick="checkSymptoms()" class="primary-button">
+                    Analyze Symptoms
+                </button>
+            </div>
+
+            <div class="result" id="result">
+                <h3>Possible Conditions:</h3>
+                <div id="conditions" class="conditions-list"></div>
+                <p class="medical-disclaimer">Important: This is not a diagnosis. Please consult with a healthcare professional for proper medical advice.</p>
+            </div>
+
+            <div id="loader" class="loader">
+                <div class="spinner"></div>
+                <p>Analyzing symptoms...</p>
+            </div>
+
+            <!-- Bottom Advertisement -->
+            <div class="bottom-ad">
+                <p>Advertisement</p>
+            </div>
+        </div>
+
+        <!-- Side Advertisement -->
+        <div class="sidebar">
+            <div class="ad-space">
+                <p>Advertisement</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>We provide free access to health information to help you understand your symptoms better.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Medical Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@healthchecker.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Health Symptom Checker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+</body>
+</html> 
